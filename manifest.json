@@ -1,13 +1,12 @@
 {
   "manifest_version": 3,
-  "name": "DeepSeek 用量 · 任意时间段增强",
-  "version": "1.2.0",
-  "description": "让 DeepSeek 开放平台用量页支持任意时间跨度查询：自动分片合并接口的 31 天上限，官方界面原生渲染；长区间图表支持横向滑动条 + 滚轮滚动查看更早日期。",
-  "minimum_chrome_version": "111",
+  "name": "DeepSeek 用量 · 任意时间段",
+  "version": "3.0.0",
+  "description": "让 DeepSeek 开放平台「用量」页支持任意时间跨度查询：自动分片拉取、结构无关合并、官方界面原生渲染，附 CSV 导出。只读，无额外权限。",
   "content_scripts": [
     {
       "matches": ["https://platform.deepseek.com/*"],
-      "js": ["ds-usage-enhancer.js"],
+      "js": ["content.js"],
       "run_at": "document_start",
       "world": "MAIN"
     }
